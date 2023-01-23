@@ -1,3 +1,13 @@
+/*********************************************************************************
+* BTI425 – Assignment 1
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy.
+* No part of this assignment has been copied manually or electronically from any other source
+* (including web sites) or distributed to other students.
+*
+* Name: ___tianchen zhang___________________ Student ID: _101569218_____________ Date: ____2023/1/22____________
+* Cyclic Link: _https://wicked-pocketbook-yak.cyclic.app________
+*
+********************************************************************************/ 
 //At this point only a single GET route "/" is required which returns the following object (JSON): {message: "API Listening"}.
 
 // Path: server.js
