@@ -1,0 +1,6 @@
+#moviesTable tr:hover
+{ 
+    cursor:pointer; 
+    background-color: #F5F5F5;
+}
+

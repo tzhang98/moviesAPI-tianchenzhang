@@ -42,7 +42,7 @@ app.post('/api/movies', (req, res) => {
   db.addNewMovie(req.body).then((data) => {
     res.status(201).json(data);
   }).catch((err) => {
-    res.status(404).json({message: err});
+    res.status(500).json({message: addfailed });
   });
 });
 
@@ -76,7 +76,7 @@ app.put('/api/movies/:id', (req, res) => {
   db.updateMovieById(req.params.id, req.body).then((data) => {
     res.status(200).json(data);
   }).catch((err) => {
-    res.status(404).json({message: err});
+    res.status(500).json({message: err});
   });
 });
 

@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "C:/Users/bossz/Downloads/BTI425-Lab-W1-S2-Act1/BTI425-Lab-W1-S2-Act1"
+		},
+		{
+			"path": "C:/Users/bossz/Downloads/mockup"
+		},
+		{
+			"path": "../ACTIVITY 1"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../week 2"
+		},
+		{
+			"path": "../../A5"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "week 2",
+		"liveServer.settings.port": 5501
+	}
+}
