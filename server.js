@@ -42,7 +42,7 @@ app.post('/api/movies', (req, res) => {
   db.addNewMovie(req.body).then((data) => {
     res.status(201).json(data);
   }).catch((err) => {
-    res.status(500).json({message: addfailed });
+    res.status(500).json({message: "addfailed" });
   });
 });
 
