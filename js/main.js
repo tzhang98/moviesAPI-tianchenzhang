@@ -1,18 +1,30 @@
 let page = 1;
 let perPage = 10;
+let url = "https://wicked-pocketbook-yak.cyclic.app";
+
+
+
 
 function loadMovieData(title = null) {
-    let url = "https://wicked-pocketbook-yak.cyclic.app/api/movies?page=" + page + "&perPage=" + perPage;
-    if (title != null) {
-        url += "&title=" + title;
-        page = 1;
+    let URL = title
+    ? `${url}/api/movies?page=${page}&perPage=${perPage}&title=${title}`
+    : `${url}/api/movies?page=${page}&perPage=${perPage}`;
+    // if (title != null) {
+    //     url += "&title=" + title;
+    //     page = 1;
+    //     document.querySelector(".pagination").classList.add("d-none");
+    // } else {
+    //     document.querySelector(".pagination").classList.remove("d-none");
+    // }
+
+    if (title) {
         document.querySelector(".pagination").classList.add("d-none");
     } else {
         document.querySelector(".pagination").classList.remove("d-none");
     }
 
     let modal = new bootstrap.Modal(document.getElementById("detailsModal"));
-    fetch(url)
+    fetch(URL)
         .then((res) => res.json())
         .then((data) => {
 
@@ -20,8 +32,7 @@ function loadMovieData(title = null) {
 
 
 
-            let movies = `${data
-                .map(
+            let movies = `${data.map(
                     (movie) =>
                         `<tr data-id="${movie._id}">
                         <td>${movie.year}</td>
@@ -65,18 +76,6 @@ function loadMovieData(title = null) {
 
 
         
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
     let title = document.querySelector("#title");
     document.querySelector("#current-page").textContent = page;
